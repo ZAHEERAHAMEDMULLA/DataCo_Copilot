@@ -1,0 +1,66 @@
+id: template_chat_flow
+name: Template Chat Flow
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  chat_history:
+    type: list
+    is_chat_input: false
+    is_chat_history: true
+  question:
+    type: string
+    is_chat_input: true
+outputs:
+  answer:
+    type: string
+    reference: ${synthesis_node.output}
+    is_chat_output: true
+nodes:
+- name: data_loader
+  type: python
+  source:
+    type: code
+    path: data_loader.py
+  inputs: {}
+  use_variants: false
+- name: code_gen_node
+  type: llm
+  source:
+    type: code
+    path: code_gen_node.jinja2
+  inputs:
+    deployment_name: gpt-4.1
+    temperature: 1
+    top_p: 1
+    response_format:
+      type: text
+    question: ${inputs.question}
+    sample_data: ${data_loader.output.sample_data}
+    schema: ${data_loader.output.schema}
+  connection: azure_openai_connection
+  api: chat
+  use_variants: false
+- name: executor_node
+  type: python
+  source:
+    type: code
+    path: executor_node.py
+  inputs:
+    code: ${code_gen_node.output}
+  use_variants: false
+- name: synthesis_node
+  type: llm
+  source:
+    type: code
+    path: synthesis_node.jinja2
+  inputs:
+    deployment_name: gpt-4.1
+    temperature: 1
+    top_p: 1
+    response_format:
+      type: text
+    execution_result: ${executor_node.output}
+    query: ${inputs.question}
+  connection: azure_openai_connection
+  api: chat
+  use_variants: false
