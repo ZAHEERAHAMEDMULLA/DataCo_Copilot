@@ -1,0 +1,333 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "chat_history": [
+          {
+            "inputs": {
+              "question": "what is the total sales "
+            },
+            "outputs": {
+              "answer": "The total sales amount is $36,784,735.01. If you need a breakdown by product, region, or time period, please let me know."
+            }
+          }
+        ],
+        "question": "The total sales amount is $36,784,735.01. If you need a b"
+      },
+      "output": {
+        "answer": "Thank you for your query regarding the total sales amount of $36,784,735.01. Unfortunately, it appears that the necessary data to provide further breakdowns or analysis is not currently available. If you need a specific breakdown or additional insights, please ensure that the relevant data is accessible, and I'll be happy to assist further. Let me know if you would like help obtaining or formatting the data for analysis."
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332",
+      "root_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332",
+      "source_run_id": null,
+      "flow_id": "template_chat_flow",
+      "start_time": "2026-01-31T07:13:46.763287Z",
+      "end_time": "2026-01-31T07:13:52.323390Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "flow",
+          "node_name": "flow",
+          "type": "Flow",
+          "start_time": 1769843626.763287,
+          "end_time": 1769843632.32339,
+          "children": [],
+          "system_metrics": {
+            "duration": 5.560103,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "inputs": {
+            "chat_history": [
+              {
+                "inputs": {
+                  "question": "what is the total sales "
+                },
+                "outputs": {
+                  "answer": "The total sales amount is $36,784,735.01. If you need a breakdown by product, region, or time period, please let me know."
+                }
+              }
+            ],
+            "question": "The total sales amount is $36,784,735.01. If you need a b"
+          },
+          "output": {
+            "answer": "<generator object post_process_chat_api_response.<locals>.generator at 0x78d21e00d380>"
+          },
+          "error": null
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 5.560103,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "result": {
+        "answer": "Thank you for your query regarding the total sales amount of $36,784,735.01. Unfortunately, it appears that the necessary data to provide further breakdowns or analysis is not currently available. If you need a specific breakdown or additional insights, please ensure that the relevant data is accessible, and I'll be happy to assist further. Let me know if you would like help obtaining or formatting the data for analysis."
+      },
+      "upload_metrics": false,
+      "otel_trace_id": null,
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "data_loader",
+      "flow_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332",
+      "run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_data_loader_0",
+      "status": "Completed",
+      "inputs": {},
+      "output": {
+        "file_path": "data/DataCoSupplyChainDataset.csv",
+        "schema": "- Type (object): e.g., ['DEBIT', 'TRANSFER', 'CASH']\n- Days_for_shipping_real (int64): e.g., [3, 5, 4]\n- Days_for_shipment_scheduled (int64): e.g., [4, 1, 2]\n- Benefit_per_order (float64): e.g., [91.25, -249.0899963, -247.7799988]\n- Sales_per_customer (float64): e.g., [314.6400146, 311.3599854, 309.7200012]\n- Delivery_Status (object): e.g., ['Advance shipping', 'Late delivery', 'Shipping on time']\n- Late_delivery_risk (int64): e.g., [0, 1]\n- Category_Id (int64): e.g., [73, 17, 29]\n- Category_Name (object): e.g., ['Sporting Goods', 'Cleats', 'Shop By Sport']\n- Customer_City (object): e.g., ['Caguas', 'San Jose', 'Los Angeles']\n- Customer_Country (object): e.g., ['Puerto Rico', 'EE. UU.']\n- Customer_Email (object): e.g., ['XXXXXXXXX']\n- Customer_Fname (object): e.g., ['Cally', 'Irene', 'Gillian']\n- Customer_Id (int64): e.g., [20755, 19492, 19491]\n- Customer_Lname (object): e.g., ['Holloway', 'Luna', 'Maldonado']\n- Customer_Password (object): e.g., ['XXXXXXXXX']\n- Customer_Segment (object): e.g., ['Consumer', 'Home Office', 'Corporate']\n- Customer_State (object): e.g., ['PR', 'CA', 'NY']\n- Customer_Street (object): e.g., ['5365 Noble Nectar Island', '2679 Rustic Loop', '8510 Round Bear Gate']\n- Customer_Zipcode (float64): e.g., [725.0, 95125.0, 90027.0]\n- Department_Id (int64): e.g., [2, 4, 5]\n- Department_Name (object): e.g., ['Fitness', 'Apparel', 'Golf']\n- Latitude (float64): e.g., [18.2514534, 18.27945137, 37.29223251]\n- Longitude (float64): e.g., [-66.03705597, -66.0370636, -121.881279]\n- Market (object): e.g., ['Pacific Asia', 'USCA', 'Africa']\n- Order_City (object): e.g., ['Bekasi', 'Bikaner', 'Townsville']\n- Order_Country (object): e.g., ['Indonesia', 'India', 'Australia']\n- Order_Customer_Id (int64): e.g., [20755, 19492, 19491]\n- order_date_DateOrders (object): e.g., ['1/31/2018 22:56', '1/13/2018 12:27', '1/13/2018 12:06']\n- Order_Id (int64): e.g., [77202, 75939, 75938]\n- Order_Item_Cardprod_Id (int64): e.g., [1360, 365, 627]\n- Order_Item_Discount (float64): e.g., [13.10999966, 16.38999939, 18.03000069]\n- Order_Item_Discount_Rate (float64): e.g., [0.039999999, 0.050000001, 0.059999999]\n- Order_Item_Id (int64): e.g., [180517, 179254, 179253]\n- Order_Item_Product_Price (float64): e.g., [327.75, 59.99000168, 39.99000168]\n- Order_Item_Profit_Ratio (float64): e.g., [0.289999992, -0.800000012, 0.079999998]\n- Order_Item_Quantity (int64): e.g., [1, 2, 3]\n- Sales (float64): e.g., [327.75, 119.9800034, 79.98000336]\n- Order_Item_Total (float64): e.g., [314.6400146, 311.3599854, 309.7200012]\n- Order_Profit_Per_Order (float64): e.g., [91.25, -249.0899963, -247.7799988]\n- Order_Region (object): e.g., ['Southeast Asia', 'South Asia', 'Oceania']\n- Order_State (object): e.g., ['Java Occidental', 'Rajastï¿½n', 'Queensland']\n- Order_Status (object): e.g., ['COMPLETE', 'PENDING', 'CLOSED']\n- Order_Zipcode (float64): e.g., [99301.0, 90049.0, 94110.0]\n- Product_Card_Id (int64): e.g., [1360, 365, 627]\n- Product_Category_Id (int64): e.g., [73, 17, 29]\n- Product_Description (float64): e.g., []\n- Product_Image (object): e.g., ['http://images.acmesports.sports/Smart+watch ', 'http://images.acmesports.sports/Perfect+Fitness+Perfect+Rip+Deck', 'http://images.acmesports.sports/Under+Armour+Girls%27+Toddler+Spine+Surge+Running+Shoe']\n- Product_Name (object): e.g., ['Smart watch ', 'Perfect Fitness Perfect Rip Deck', \"Under Armour Girls' Toddler Spine Surge Runni\"]\n- Product_Price (float64): e.g., [327.75, 59.99000168, 39.99000168]\n- Product_Status (int64): e.g., [0]\n- shipping_date_DateOrders (object): e.g., ['2/3/2018 22:56', '1/18/2018 12:27', '1/17/2018 12:06']\n- Shipping_Mode (object): e.g., ['Standard Class', 'First Class', 'Second Class']",
+        "sample_data": "       Type  Days_for_shipping_real  Days_for_shipment_scheduled  Benefit_per_order  Sales_per_customer   Delivery_Status  Late_delivery_risk  Category_Id   Category_Name Customer_City Customer_Country Customer_Email Customer_Fname  Customer_Id Customer_Lname Customer_Password Customer_Segment Customer_State           Customer_Street  Customer_Zipcode  Department_Id Department_Name   Latitude   Longitude        Market  Order_City Order_Country  Order_Customer_Id order_date_DateOrders  Order_Id  Order_Item_Cardprod_Id  Order_Item_Discount  Order_Item_Discount_Rate  Order_Item_Id  Order_Item_Product_Price  Order_Item_Profit_Ratio  Order_Item_Quantity   Sales  Order_Item_Total  Order_Profit_Per_Order    Order_Region      Order_State     Order_Status  Order_Zipcode  Product_Card_Id  Product_Category_Id  Product_Description                                 Product_Image  Product_Name  Product_Price  Product_Status shipping_date_DateOrders   Shipping_Mode\n0     DEBIT                       3                            4          91.250000          314.640015  Advance shipping                   0           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX          Cally        20755       Holloway         XXXXXXXXX         Consumer             PR  5365 Noble Nectar Island             725.0              2         Fitness  18.251453  -66.037056  Pacific Asia      Bekasi     Indonesia              20755       1/31/2018 22:56     77202                    1360            13.110000                      0.04         180517                    327.75                     0.29                    1  327.75        314.640015               91.250000  Southeast Asia  Java Occidental         COMPLETE            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0           2/3/2018 22:56  Standard Class\n1  TRANSFER                       5                            4        -249.089996          311.359985     Late delivery                   1           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX          Irene        19492           Luna         XXXXXXXXX         Consumer             PR          2679 Rustic Loop             725.0              2         Fitness  18.279451  -66.037064  Pacific Asia     Bikaner         India              19492       1/13/2018 12:27     75939                    1360            16.389999                      0.05         179254                    327.75                    -0.80                    1  327.75        311.359985             -249.089996      South Asia       Rajastï¿½n          PENDING            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/18/2018 12:27  Standard Class\n2      CASH                       4                            4        -247.779999          309.720001  Shipping on time                   0           73  Sporting Goods      San Jose          EE. UU.      XXXXXXXXX        Gillian        19491      Maldonado         XXXXXXXXX         Consumer             CA      8510 Round Bear Gate           95125.0              2         Fitness  37.292233 -121.881279  Pacific Asia     Bikaner         India              19491       1/13/2018 12:06     75938                    1360            18.030001                      0.06         179253                    327.75                    -0.80                    1  327.75        309.720001             -247.779999      South Asia       Rajastï¿½n           CLOSED            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/17/2018 12:06  Standard Class\n3     DEBIT                       3                            4          22.860001          304.809998  Advance shipping                   0           73  Sporting Goods   Los Angeles          EE. UU.      XXXXXXXXX           Tana        19490           Tate         XXXXXXXXX      Home Office             CA           3200 Amber Bend           90027.0              2         Fitness  34.125946 -118.291016  Pacific Asia  Townsville     Australia              19490       1/13/2018 11:45     75937                    1360            22.940001                      0.07         179252                    327.75                     0.08                    1  327.75        304.809998               22.860001         Oceania       Queensland         COMPLETE            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/16/2018 11:45  Standard Class\n4   PAYMENT                       2                            4         134.210007          298.250000  Advance shipping                   0           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX           Orli        19489      Hendricks         XXXXXXXXX        Corporate             PR  8671 Iron Anchor Corners             725.0              2         Fitness  18.253769  -66.037048  Pacific Asia  Townsville     Australia              19489       1/13/2018 11:24     75936                    1360            29.500000                      0.09         179251                    327.75                     0.45                    1  327.75        298.250000              134.210007         Oceania       Queensland  PENDING_PAYMENT            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/15/2018 11:24  Standard Class",
+        "columns": [
+          "Type",
+          "Days_for_shipping_real",
+          "Days_for_shipment_scheduled",
+          "Benefit_per_order",
+          "Sales_per_customer",
+          "Delivery_Status",
+          "Late_delivery_risk",
+          "Category_Id",
+          "Category_Name",
+          "Customer_City",
+          "Customer_Country",
+          "Customer_Email",
+          "Customer_Fname",
+          "Customer_Id",
+          "Customer_Lname",
+          "Customer_Password",
+          "Customer_Segment",
+          "Customer_State",
+          "Customer_Street",
+          "Customer_Zipcode",
+          "Department_Id",
+          "Department_Name",
+          "Latitude",
+          "Longitude",
+          "Market",
+          "Order_City",
+          "Order_Country",
+          "Order_Customer_Id",
+          "order_date_DateOrders",
+          "Order_Id",
+          "Order_Item_Cardprod_Id",
+          "Order_Item_Discount",
+          "Order_Item_Discount_Rate",
+          "Order_Item_Id",
+          "Order_Item_Product_Price",
+          "Order_Item_Profit_Ratio",
+          "Order_Item_Quantity",
+          "Sales",
+          "Order_Item_Total",
+          "Order_Profit_Per_Order",
+          "Order_Region",
+          "Order_State",
+          "Order_Status",
+          "Order_Zipcode",
+          "Product_Card_Id",
+          "Product_Category_Id",
+          "Product_Description",
+          "Product_Image",
+          "Product_Name",
+          "Product_Price",
+          "Product_Status",
+          "shipping_date_DateOrders",
+          "Shipping_Mode"
+        ]
+      },
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_0",
+      "start_time": "2026-01-31T07:13:46.763988Z",
+      "end_time": "2026-01-31T07:13:48.387732Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 1.623744
+      },
+      "result": {
+        "file_path": "data/DataCoSupplyChainDataset.csv",
+        "schema": "- Type (object): e.g., ['DEBIT', 'TRANSFER', 'CASH']\n- Days_for_shipping_real (int64): e.g., [3, 5, 4]\n- Days_for_shipment_scheduled (int64): e.g., [4, 1, 2]\n- Benefit_per_order (float64): e.g., [91.25, -249.0899963, -247.7799988]\n- Sales_per_customer (float64): e.g., [314.6400146, 311.3599854, 309.7200012]\n- Delivery_Status (object): e.g., ['Advance shipping', 'Late delivery', 'Shipping on time']\n- Late_delivery_risk (int64): e.g., [0, 1]\n- Category_Id (int64): e.g., [73, 17, 29]\n- Category_Name (object): e.g., ['Sporting Goods', 'Cleats', 'Shop By Sport']\n- Customer_City (object): e.g., ['Caguas', 'San Jose', 'Los Angeles']\n- Customer_Country (object): e.g., ['Puerto Rico', 'EE. UU.']\n- Customer_Email (object): e.g., ['XXXXXXXXX']\n- Customer_Fname (object): e.g., ['Cally', 'Irene', 'Gillian']\n- Customer_Id (int64): e.g., [20755, 19492, 19491]\n- Customer_Lname (object): e.g., ['Holloway', 'Luna', 'Maldonado']\n- Customer_Password (object): e.g., ['XXXXXXXXX']\n- Customer_Segment (object): e.g., ['Consumer', 'Home Office', 'Corporate']\n- Customer_State (object): e.g., ['PR', 'CA', 'NY']\n- Customer_Street (object): e.g., ['5365 Noble Nectar Island', '2679 Rustic Loop', '8510 Round Bear Gate']\n- Customer_Zipcode (float64): e.g., [725.0, 95125.0, 90027.0]\n- Department_Id (int64): e.g., [2, 4, 5]\n- Department_Name (object): e.g., ['Fitness', 'Apparel', 'Golf']\n- Latitude (float64): e.g., [18.2514534, 18.27945137, 37.29223251]\n- Longitude (float64): e.g., [-66.03705597, -66.0370636, -121.881279]\n- Market (object): e.g., ['Pacific Asia', 'USCA', 'Africa']\n- Order_City (object): e.g., ['Bekasi', 'Bikaner', 'Townsville']\n- Order_Country (object): e.g., ['Indonesia', 'India', 'Australia']\n- Order_Customer_Id (int64): e.g., [20755, 19492, 19491]\n- order_date_DateOrders (object): e.g., ['1/31/2018 22:56', '1/13/2018 12:27', '1/13/2018 12:06']\n- Order_Id (int64): e.g., [77202, 75939, 75938]\n- Order_Item_Cardprod_Id (int64): e.g., [1360, 365, 627]\n- Order_Item_Discount (float64): e.g., [13.10999966, 16.38999939, 18.03000069]\n- Order_Item_Discount_Rate (float64): e.g., [0.039999999, 0.050000001, 0.059999999]\n- Order_Item_Id (int64): e.g., [180517, 179254, 179253]\n- Order_Item_Product_Price (float64): e.g., [327.75, 59.99000168, 39.99000168]\n- Order_Item_Profit_Ratio (float64): e.g., [0.289999992, -0.800000012, 0.079999998]\n- Order_Item_Quantity (int64): e.g., [1, 2, 3]\n- Sales (float64): e.g., [327.75, 119.9800034, 79.98000336]\n- Order_Item_Total (float64): e.g., [314.6400146, 311.3599854, 309.7200012]\n- Order_Profit_Per_Order (float64): e.g., [91.25, -249.0899963, -247.7799988]\n- Order_Region (object): e.g., ['Southeast Asia', 'South Asia', 'Oceania']\n- Order_State (object): e.g., ['Java Occidental', 'Rajastï¿½n', 'Queensland']\n- Order_Status (object): e.g., ['COMPLETE', 'PENDING', 'CLOSED']\n- Order_Zipcode (float64): e.g., [99301.0, 90049.0, 94110.0]\n- Product_Card_Id (int64): e.g., [1360, 365, 627]\n- Product_Category_Id (int64): e.g., [73, 17, 29]\n- Product_Description (float64): e.g., []\n- Product_Image (object): e.g., ['http://images.acmesports.sports/Smart+watch ', 'http://images.acmesports.sports/Perfect+Fitness+Perfect+Rip+Deck', 'http://images.acmesports.sports/Under+Armour+Girls%27+Toddler+Spine+Surge+Running+Shoe']\n- Product_Name (object): e.g., ['Smart watch ', 'Perfect Fitness Perfect Rip Deck', \"Under Armour Girls' Toddler Spine Surge Runni\"]\n- Product_Price (float64): e.g., [327.75, 59.99000168, 39.99000168]\n- Product_Status (int64): e.g., [0]\n- shipping_date_DateOrders (object): e.g., ['2/3/2018 22:56', '1/18/2018 12:27', '1/17/2018 12:06']\n- Shipping_Mode (object): e.g., ['Standard Class', 'First Class', 'Second Class']",
+        "sample_data": "       Type  Days_for_shipping_real  Days_for_shipment_scheduled  Benefit_per_order  Sales_per_customer   Delivery_Status  Late_delivery_risk  Category_Id   Category_Name Customer_City Customer_Country Customer_Email Customer_Fname  Customer_Id Customer_Lname Customer_Password Customer_Segment Customer_State           Customer_Street  Customer_Zipcode  Department_Id Department_Name   Latitude   Longitude        Market  Order_City Order_Country  Order_Customer_Id order_date_DateOrders  Order_Id  Order_Item_Cardprod_Id  Order_Item_Discount  Order_Item_Discount_Rate  Order_Item_Id  Order_Item_Product_Price  Order_Item_Profit_Ratio  Order_Item_Quantity   Sales  Order_Item_Total  Order_Profit_Per_Order    Order_Region      Order_State     Order_Status  Order_Zipcode  Product_Card_Id  Product_Category_Id  Product_Description                                 Product_Image  Product_Name  Product_Price  Product_Status shipping_date_DateOrders   Shipping_Mode\n0     DEBIT                       3                            4          91.250000          314.640015  Advance shipping                   0           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX          Cally        20755       Holloway         XXXXXXXXX         Consumer             PR  5365 Noble Nectar Island             725.0              2         Fitness  18.251453  -66.037056  Pacific Asia      Bekasi     Indonesia              20755       1/31/2018 22:56     77202                    1360            13.110000                      0.04         180517                    327.75                     0.29                    1  327.75        314.640015               91.250000  Southeast Asia  Java Occidental         COMPLETE            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0           2/3/2018 22:56  Standard Class\n1  TRANSFER                       5                            4        -249.089996          311.359985     Late delivery                   1           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX          Irene        19492           Luna         XXXXXXXXX         Consumer             PR          2679 Rustic Loop             725.0              2         Fitness  18.279451  -66.037064  Pacific Asia     Bikaner         India              19492       1/13/2018 12:27     75939                    1360            16.389999                      0.05         179254                    327.75                    -0.80                    1  327.75        311.359985             -249.089996      South Asia       Rajastï¿½n          PENDING            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/18/2018 12:27  Standard Class\n2      CASH                       4                            4        -247.779999          309.720001  Shipping on time                   0           73  Sporting Goods      San Jose          EE. UU.      XXXXXXXXX        Gillian        19491      Maldonado         XXXXXXXXX         Consumer             CA      8510 Round Bear Gate           95125.0              2         Fitness  37.292233 -121.881279  Pacific Asia     Bikaner         India              19491       1/13/2018 12:06     75938                    1360            18.030001                      0.06         179253                    327.75                    -0.80                    1  327.75        309.720001             -247.779999      South Asia       Rajastï¿½n           CLOSED            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/17/2018 12:06  Standard Class\n3     DEBIT                       3                            4          22.860001          304.809998  Advance shipping                   0           73  Sporting Goods   Los Angeles          EE. UU.      XXXXXXXXX           Tana        19490           Tate         XXXXXXXXX      Home Office             CA           3200 Amber Bend           90027.0              2         Fitness  34.125946 -118.291016  Pacific Asia  Townsville     Australia              19490       1/13/2018 11:45     75937                    1360            22.940001                      0.07         179252                    327.75                     0.08                    1  327.75        304.809998               22.860001         Oceania       Queensland         COMPLETE            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/16/2018 11:45  Standard Class\n4   PAYMENT                       2                            4         134.210007          298.250000  Advance shipping                   0           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX           Orli        19489      Hendricks         XXXXXXXXX        Corporate             PR  8671 Iron Anchor Corners             725.0              2         Fitness  18.253769  -66.037048  Pacific Asia  Townsville     Australia              19489       1/13/2018 11:24     75936                    1360            29.500000                      0.09         179251                    327.75                     0.45                    1  327.75        298.250000              134.210007         Oceania       Queensland  PENDING_PAYMENT            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/15/2018 11:24  Standard Class",
+        "columns": [
+          "Type",
+          "Days_for_shipping_real",
+          "Days_for_shipment_scheduled",
+          "Benefit_per_order",
+          "Sales_per_customer",
+          "Delivery_Status",
+          "Late_delivery_risk",
+          "Category_Id",
+          "Category_Name",
+          "Customer_City",
+          "Customer_Country",
+          "Customer_Email",
+          "Customer_Fname",
+          "Customer_Id",
+          "Customer_Lname",
+          "Customer_Password",
+          "Customer_Segment",
+          "Customer_State",
+          "Customer_Street",
+          "Customer_Zipcode",
+          "Department_Id",
+          "Department_Name",
+          "Latitude",
+          "Longitude",
+          "Market",
+          "Order_City",
+          "Order_Country",
+          "Order_Customer_Id",
+          "order_date_DateOrders",
+          "Order_Id",
+          "Order_Item_Cardprod_Id",
+          "Order_Item_Discount",
+          "Order_Item_Discount_Rate",
+          "Order_Item_Id",
+          "Order_Item_Product_Price",
+          "Order_Item_Profit_Ratio",
+          "Order_Item_Quantity",
+          "Sales",
+          "Order_Item_Total",
+          "Order_Profit_Per_Order",
+          "Order_Region",
+          "Order_State",
+          "Order_Status",
+          "Order_Zipcode",
+          "Product_Card_Id",
+          "Product_Category_Id",
+          "Product_Description",
+          "Product_Image",
+          "Product_Name",
+          "Product_Price",
+          "Product_Status",
+          "shipping_date_DateOrders",
+          "Shipping_Mode"
+        ]
+      },
+      "message_format": "basic"
+    },
+    {
+      "node": "code_gen_node",
+      "flow_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332",
+      "run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_code_gen_node_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4.1",
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "response_format": {
+          "type": "text"
+        },
+        "question": "The total sales amount is $36,784,735.01. If you need a b",
+        "sample_data": "       Type  Days_for_shipping_real  Days_for_shipment_scheduled  Benefit_per_order  Sales_per_customer   Delivery_Status  Late_delivery_risk  Category_Id   Category_Name Customer_City Customer_Country Customer_Email Customer_Fname  Customer_Id Customer_Lname Customer_Password Customer_Segment Customer_State           Customer_Street  Customer_Zipcode  Department_Id Department_Name   Latitude   Longitude        Market  Order_City Order_Country  Order_Customer_Id order_date_DateOrders  Order_Id  Order_Item_Cardprod_Id  Order_Item_Discount  Order_Item_Discount_Rate  Order_Item_Id  Order_Item_Product_Price  Order_Item_Profit_Ratio  Order_Item_Quantity   Sales  Order_Item_Total  Order_Profit_Per_Order    Order_Region      Order_State     Order_Status  Order_Zipcode  Product_Card_Id  Product_Category_Id  Product_Description                                 Product_Image  Product_Name  Product_Price  Product_Status shipping_date_DateOrders   Shipping_Mode\n0     DEBIT                       3                            4          91.250000          314.640015  Advance shipping                   0           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX          Cally        20755       Holloway         XXXXXXXXX         Consumer             PR  5365 Noble Nectar Island             725.0              2         Fitness  18.251453  -66.037056  Pacific Asia      Bekasi     Indonesia              20755       1/31/2018 22:56     77202                    1360            13.110000                      0.04         180517                    327.75                     0.29                    1  327.75        314.640015               91.250000  Southeast Asia  Java Occidental         COMPLETE            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0           2/3/2018 22:56  Standard Class\n1  TRANSFER                       5                            4        -249.089996          311.359985     Late delivery                   1           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX          Irene        19492           Luna         XXXXXXXXX         Consumer             PR          2679 Rustic Loop             725.0              2         Fitness  18.279451  -66.037064  Pacific Asia     Bikaner         India              19492       1/13/2018 12:27     75939                    1360            16.389999                      0.05         179254                    327.75                    -0.80                    1  327.75        311.359985             -249.089996      South Asia       Rajastï¿½n          PENDING            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/18/2018 12:27  Standard Class\n2      CASH                       4                            4        -247.779999          309.720001  Shipping on time                   0           73  Sporting Goods      San Jose          EE. UU.      XXXXXXXXX        Gillian        19491      Maldonado         XXXXXXXXX         Consumer             CA      8510 Round Bear Gate           95125.0              2         Fitness  37.292233 -121.881279  Pacific Asia     Bikaner         India              19491       1/13/2018 12:06     75938                    1360            18.030001                      0.06         179253                    327.75                    -0.80                    1  327.75        309.720001             -247.779999      South Asia       Rajastï¿½n           CLOSED            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/17/2018 12:06  Standard Class\n3     DEBIT                       3                            4          22.860001          304.809998  Advance shipping                   0           73  Sporting Goods   Los Angeles          EE. UU.      XXXXXXXXX           Tana        19490           Tate         XXXXXXXXX      Home Office             CA           3200 Amber Bend           90027.0              2         Fitness  34.125946 -118.291016  Pacific Asia  Townsville     Australia              19490       1/13/2018 11:45     75937                    1360            22.940001                      0.07         179252                    327.75                     0.08                    1  327.75        304.809998               22.860001         Oceania       Queensland         COMPLETE            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/16/2018 11:45  Standard Class\n4   PAYMENT                       2                            4         134.210007          298.250000  Advance shipping                   0           73  Sporting Goods        Caguas      Puerto Rico      XXXXXXXXX           Orli        19489      Hendricks         XXXXXXXXX        Corporate             PR  8671 Iron Anchor Corners             725.0              2         Fitness  18.253769  -66.037048  Pacific Asia  Townsville     Australia              19489       1/13/2018 11:24     75936                    1360            29.500000                      0.09         179251                    327.75                     0.45                    1  327.75        298.250000              134.210007         Oceania       Queensland  PENDING_PAYMENT            NaN             1360                   73                  NaN  http://images.acmesports.sports/Smart+watch   Smart watch          327.75               0          1/15/2018 11:24  Standard Class",
+        "schema": "- Type (object): e.g., ['DEBIT', 'TRANSFER', 'CASH']\n- Days_for_shipping_real (int64): e.g., [3, 5, 4]\n- Days_for_shipment_scheduled (int64): e.g., [4, 1, 2]\n- Benefit_per_order (float64): e.g., [91.25, -249.0899963, -247.7799988]\n- Sales_per_customer (float64): e.g., [314.6400146, 311.3599854, 309.7200012]\n- Delivery_Status (object): e.g., ['Advance shipping', 'Late delivery', 'Shipping on time']\n- Late_delivery_risk (int64): e.g., [0, 1]\n- Category_Id (int64): e.g., [73, 17, 29]\n- Category_Name (object): e.g., ['Sporting Goods', 'Cleats', 'Shop By Sport']\n- Customer_City (object): e.g., ['Caguas', 'San Jose', 'Los Angeles']\n- Customer_Country (object): e.g., ['Puerto Rico', 'EE. UU.']\n- Customer_Email (object): e.g., ['XXXXXXXXX']\n- Customer_Fname (object): e.g., ['Cally', 'Irene', 'Gillian']\n- Customer_Id (int64): e.g., [20755, 19492, 19491]\n- Customer_Lname (object): e.g., ['Holloway', 'Luna', 'Maldonado']\n- Customer_Password (object): e.g., ['XXXXXXXXX']\n- Customer_Segment (object): e.g., ['Consumer', 'Home Office', 'Corporate']\n- Customer_State (object): e.g., ['PR', 'CA', 'NY']\n- Customer_Street (object): e.g., ['5365 Noble Nectar Island', '2679 Rustic Loop', '8510 Round Bear Gate']\n- Customer_Zipcode (float64): e.g., [725.0, 95125.0, 90027.0]\n- Department_Id (int64): e.g., [2, 4, 5]\n- Department_Name (object): e.g., ['Fitness', 'Apparel', 'Golf']\n- Latitude (float64): e.g., [18.2514534, 18.27945137, 37.29223251]\n- Longitude (float64): e.g., [-66.03705597, -66.0370636, -121.881279]\n- Market (object): e.g., ['Pacific Asia', 'USCA', 'Africa']\n- Order_City (object): e.g., ['Bekasi', 'Bikaner', 'Townsville']\n- Order_Country (object): e.g., ['Indonesia', 'India', 'Australia']\n- Order_Customer_Id (int64): e.g., [20755, 19492, 19491]\n- order_date_DateOrders (object): e.g., ['1/31/2018 22:56', '1/13/2018 12:27', '1/13/2018 12:06']\n- Order_Id (int64): e.g., [77202, 75939, 75938]\n- Order_Item_Cardprod_Id (int64): e.g., [1360, 365, 627]\n- Order_Item_Discount (float64): e.g., [13.10999966, 16.38999939, 18.03000069]\n- Order_Item_Discount_Rate (float64): e.g., [0.039999999, 0.050000001, 0.059999999]\n- Order_Item_Id (int64): e.g., [180517, 179254, 179253]\n- Order_Item_Product_Price (float64): e.g., [327.75, 59.99000168, 39.99000168]\n- Order_Item_Profit_Ratio (float64): e.g., [0.289999992, -0.800000012, 0.079999998]\n- Order_Item_Quantity (int64): e.g., [1, 2, 3]\n- Sales (float64): e.g., [327.75, 119.9800034, 79.98000336]\n- Order_Item_Total (float64): e.g., [314.6400146, 311.3599854, 309.7200012]\n- Order_Profit_Per_Order (float64): e.g., [91.25, -249.0899963, -247.7799988]\n- Order_Region (object): e.g., ['Southeast Asia', 'South Asia', 'Oceania']\n- Order_State (object): e.g., ['Java Occidental', 'Rajastï¿½n', 'Queensland']\n- Order_Status (object): e.g., ['COMPLETE', 'PENDING', 'CLOSED']\n- Order_Zipcode (float64): e.g., [99301.0, 90049.0, 94110.0]\n- Product_Card_Id (int64): e.g., [1360, 365, 627]\n- Product_Category_Id (int64): e.g., [73, 17, 29]\n- Product_Description (float64): e.g., []\n- Product_Image (object): e.g., ['http://images.acmesports.sports/Smart+watch ', 'http://images.acmesports.sports/Perfect+Fitness+Perfect+Rip+Deck', 'http://images.acmesports.sports/Under+Armour+Girls%27+Toddler+Spine+Surge+Running+Shoe']\n- Product_Name (object): e.g., ['Smart watch ', 'Perfect Fitness Perfect Rip Deck', \"Under Armour Girls' Toddler Spine Surge Runni\"]\n- Product_Price (float64): e.g., [327.75, 59.99000168, 39.99000168]\n- Product_Status (int64): e.g., [0]\n- shipping_date_DateOrders (object): e.g., ['2/3/2018 22:56', '1/18/2018 12:27', '1/17/2018 12:06']\n- Shipping_Mode (object): e.g., ['Standard Class', 'First Class', 'Second Class']",
+        "_inputs_to_escape": [
+          "question"
+        ]
+      },
+      "output": "result = \"Data not available\"",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_0",
+      "start_time": "2026-01-31T07:13:48.388605Z",
+      "end_time": "2026-01-31T07:13:49.925830Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 1.537225
+      },
+      "result": "result = \"Data not available\"",
+      "message_format": "basic"
+    },
+    {
+      "node": "executor_node",
+      "flow_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332",
+      "run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_executor_node_0",
+      "status": "Completed",
+      "inputs": {
+        "code": "result = \"Data not available\""
+      },
+      "output": "Data not available",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_0",
+      "start_time": "2026-01-31T07:13:49.926404Z",
+      "end_time": "2026-01-31T07:13:51.065360Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 1.138956
+      },
+      "result": "Data not available",
+      "message_format": "basic"
+    },
+    {
+      "node": "synthesis_node",
+      "flow_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332",
+      "run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_synthesis_node_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4.1",
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "response_format": {
+          "type": "text"
+        },
+        "execution_result": "Data not available",
+        "query": "The total sales amount is $36,784,735.01. If you need a b",
+        "_inputs_to_escape": [
+          "query"
+        ]
+      },
+      "output": "<generator object post_process_chat_api_response.<locals>.generator at 0x78d21e00d380>",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "b836ddb7-0996-46ad-83b4-5759a9000332_0",
+      "start_time": "2026-01-31T07:13:51.066287Z",
+      "end_time": "2026-01-31T07:13:52.322514Z",
+      "index": 0,
+      "api_calls": [],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 1.256227
+      },
+      "result": "<generator object post_process_chat_api_response.<locals>.generator at 0x78d21e00d380>",
+      "message_format": "basic"
+    }
+  ]
+}
